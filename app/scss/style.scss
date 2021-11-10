@@ -1,0 +1,514 @@
+/*start->main config*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 45px;
+}
+
+body {
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+.page {
+  background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url(../images/bg.jpg) center center no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+}
+
+/*loading*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 2s;
+}
+
+.load {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load img {
+  animation: 2s loading-part-2 linear infinite;
+}
+
+@keyframes loading-part-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading-part-2 {
+  0% {
+    z-index: 9999;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    z-index: 9999;
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: 9999;
+  }
+}
+
+/*///////*/
+
+/*end->main config*/
+/*start->header config*/
+.header__inner {
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  & > a > .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  & ul {
+    display: flex;
+    align-items: center;
+  }
+
+  & li {
+    text-align: center;
+    list-style: none;
+    width: 150px;
+    height: 100px;
+    border-top: 5px solid transparent;
+    line-height: 93px;
+  }
+
+  & li:hover {
+    border-top: 5px solid #97CA2B;
+    background-color: #A9A9A930;
+  }
+
+  & li:last-child {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    line-height: inherit;
+  }
+
+  & li:last-child:hover {
+    cursor: pointer;
+    border-top: 5px solid transparent;
+    background-color: #fff;
+  }
+
+  & ul a {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+
+  & li:last-child a {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+  }
+}
+
+/*end->header config*/
+/*start->main-content config*/
+.main {
+  color: white;
+  margin-top: 100px;
+  height: 500px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__info {
+    width: 700px;
+    margin-top: 25px;
+    font-size: 18px;
+  }
+
+  &__btn {
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+    border: 1px solid #ffffff;
+  }
+
+  &__btn:hover {
+    background-color: #fff;
+
+    a {
+      color: black;
+    }
+  }
+
+  &__btn a {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  &__form {
+    width: 500px;
+    height: 400px;
+    background-color: #3499DD;
+    border-radius: 10px;
+    padding: 60px 30px;
+  }
+
+  &__search-form {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.btn-submit {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b98a00;
+  }
+}
+
+.block {
+  display: inline-block;
+}
+
+.main__search-form input,
+label {
+  display: block;
+}
+
+.main__search-form input, .main__search-form select {
+  width: 180px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.btn-submit {
+  background-color: #F7B903;
+  color: #ffffff;
+}
+
+/*end->main-content config*/
+
+/*lines*/
+.green-line {
+  width: 150px;
+  border-bottom: 2px solid #97CA2B;
+  margin-top: 5px;
+}
+
+.orange-line {
+  width: 150px;
+  border-bottom: 2px solid #F7B903;
+  margin-top: 5px;
+}
+
+/*//////*/
+
+/*start->about-us config*/
+.crumbs {
+  -webkit-user-select: none;
+  height: 160px;
+  background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url(../images/bg-2.jpg) bottom center no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 20px;
+
+  &__subtitle {
+    font-size: 24px;
+
+  }
+
+  &__title {
+    font-size: 48px;
+    margin: 10px auto;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  & a:last-child {
+    text-decoration: underline;
+  }
+}
+
+.about-us {
+  &__preface {
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+
+    &-title {
+      font-weight: bold;
+      padding-top: 20px;
+      font-size: 48px;
+    }
+
+    &-text {
+      font-size: 24px;
+
+      & p {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    & > .orange-line {
+      margin: 20px auto;
+    }
+  }
+
+  &__quote {
+    font-style: italic;
+    color: #ffffff;
+    width: 100%;
+    height: 250px;
+    background-color: #3499DD;
+    margin: 20px auto;
+
+    & p {
+      max-width: 1200px;
+      text-align: center;
+      margin: 0 auto;
+      padding: 60px;
+    }
+  }
+
+  &__benefits {
+    text-align: center;
+    margin-bottom: 50px;
+
+    & > .orange-line, .green-line {
+      margin: 0 auto;
+    }
+
+    &-item img {
+      width: 50px;
+      height: 50px;
+      transform: translate(3%, 30%);
+    }
+
+    &-item-title {
+      font-weight: bold;
+      font-size: 24px;
+      padding: 20px;
+    }
+
+    &-item-text {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 18px;
+      padding: 20px;
+    }
+
+    &-image {
+      width: 80px;
+      height: 80px;
+      margin: 20px auto;
+      border-radius: 50px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    &-title {
+      font-weight: bold;
+      padding: 20px;
+      font-size: 48px;
+    }
+  }
+}
+
+/*end->about-us config*/
+
+/*start->contacts config*/
+.contacts {
+  text-align: center;
+
+  &__inner {
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  &__form-title {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 48px;
+  }
+
+  &__form-text {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  & > .container > .contacts__inner > .orange-line {
+    margin: 20px auto;
+  }
+
+  &__form {
+    margin: 20px auto;
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    & > .textarea, .btn {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    & input, textarea {
+      width: 100%;
+      padding: 10px;
+      min-height: 50px;
+      resize: none;
+      outline: none;
+    }
+
+    & > .btn input {
+      margin: 20px auto 50px auto;
+      width: 200px;
+      font-size: 18px;
+
+      background-color: #F7B903;
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    font-size: 18px;
+    margin-bottom: 50px;
+
+    &-item > .gray-line {
+      width: 300px;
+      margin: 10px auto;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    &-text {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/*end->contacts config*/
+/*start->routes config*/
+.routes {
+  text-align: center;
+
+  &__title {
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 48px;
+  }
+  & > .container > .routes__inner > .orange-line {
+    margin: 20px auto;
+  }
+  &__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & input, select{
+      width: 180px;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+      outline: none;
+    }
+  }
+}
+  /*ens->routes config*/
+  /*start->footer config*/
+  .footer {
+    background-color: #fff;
+    height: 200px;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px -15px 25px rgba(0, 0, 0, 0.25);
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__feedback {
+      font-size: 16px;
+      padding-top: 33px;
+    }
+
+    &__copyright {
+      text-align: right;
+      margin-top: auto;
+    }
+
+    & p {
+      margin-top: 20px;
+    }
+
+    & a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+/*end->footer config*/

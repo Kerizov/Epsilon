@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="/"><img class="logo" src="images/logo.svg" alt="logo"></a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href=""><img src="images/user.svg" alt=""></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                <div class="desc">
+                    <div class="main__slogan">
+                        <h1>
+                            Небеса ждут тебя
+                        </h1>
+                    </div>
+                    <div class="main__info">
+                        <p>
+                            Вместе с Epsilon вы сможете быстро заказать
+                            билеты на самолет и как можно скорее насладится своим
+                            отпуском
+                        </p>
+                    </div>
+                    <div class="main__btn">
+                        <a href="about.html">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+                <div class="main__form">
+                    <form class="main__search-form" action="routes.html" method="get">
+                        <div class="block">
+                            <label for="from">Откуда</label>
+                            <input type="text" id="from">
+                            <label for="return">Прилет</label>
+                            <input type="date" id="return">
+                            <label for="class">Выберите класс</label>
+                            <select id="class">
+                                <option value="">Эконом</option>
+                                <option value="">Бизнес</option>
+                                <option value="">Люкс</option>
+                            </select>
+                        </div>
+                        <div class="block">
+                            <label for="to">Куда</label>
+                            <input type="text" id="to">
+                            <label for="depart">Вылет</label>
+                            <input type="date" id="depart">
+
+                            <label for="passenger">Кол-во пассажиров</label>
+                            <input type="number" id="passenger" min="1" max="10">
+                            <input class="btn-submit" type="submit" value="Поиск">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__feedback">
+                    <h3>Связь с нами</h3>
+                    <div class="green-line"></div>
+                    <p class="footer__address">Адрес: Протопоповский пер., 9, Москва, 129090</p>
+                    <p class="footer__phone"><a href="tel:88005553535">Тел: 8 (800) 555-35-35</a></p>
+                    <p class="footer__mail"><a href="mailto:epsilon@gmail.com">Почта: epsilon@gmail.com</a></p>
+                </div>
+                <div class="footer__copyright">
+                    Разработано веб-студией "MnoyRazrabotano"
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</form>
+<script src="js/main.min.js"></script>
+</body>
+</html>
