@@ -491,13 +491,15 @@ label {
     }
 
     & input, select {
-      width: 180px;
+      width: 200px;/*180px*/
       height: 40px;
       border: 1px solid transparent;
       border-radius: 5px;
       padding: 10px;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
       outline: none;
+
+
     }
   }
 
