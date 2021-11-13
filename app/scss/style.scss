@@ -9,7 +9,7 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1800px;
   padding: 0 45px;
 }
 
@@ -254,13 +254,19 @@ label {
   margin-top: 5px;
 }
 
+.gray-line {
+  width: 500px;
+  margin: 10px auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 /*//////*/
 
 /*start->about-us config*/
 .crumbs {
   -webkit-user-select: none;
   height: 160px;
-  background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url(../images/bg-2.jpg) bottom center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)), url(../images/bg-3.jpg) center center no-repeat;
   background-size: cover;
   text-align: center;
   color: #ffffff;
@@ -421,7 +427,6 @@ label {
       margin: 20px auto 50px auto;
       width: 200px;
       font-size: 18px;
-
       background-color: #F7B903;
       color: #ffffff;
       border: none;
@@ -438,8 +443,6 @@ label {
 
     &-item > .gray-line {
       width: 300px;
-      margin: 10px auto;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     }
 
     &-text {
@@ -452,63 +455,113 @@ label {
 /*start->routes config*/
 .routes {
   text-align: center;
+  width: 800px;
+  margin: 0 auto;
+
+  &__item-up, &__item-down {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 
   &__title {
     font-weight: bold;
     padding-top: 20px;
     font-size: 48px;
   }
+
   & > .container > .routes__inner > .orange-line {
     margin: 20px auto;
   }
-  &__form{
+
+  &__text {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+  }
+
+  &__form {
     display: flex;
     justify-content: center;
     align-items: center;
-    & input, select{
+
+    & > .block + .block {
+      margin-left: 50px;
+    }
+
+    & input, select {
       width: 180px;
       height: 40px;
       border: 1px solid transparent;
       border-radius: 5px;
-      box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+      padding: 10px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
       outline: none;
     }
   }
-}
-  /*ens->routes config*/
-  /*start->footer config*/
-  .footer {
+
+  &__item {
+    padding: 50px;
+    height: 250px;
     background-color: #fff;
-    height: 200px;
-    margin-top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0px -15px 25px rgba(0, 0, 0, 0.25);
-
-    &__inner {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__feedback {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    & > button{
+      width: 180px;
+      height: 40px;
+      color: #fff;
+      margin-bottom: 20px;
+      background-color: #F7B903;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      padding: 5px;
       font-size: 16px;
-      padding-top: 33px;
     }
-
-    &__copyright {
-      text-align: right;
-      margin-top: auto;
-    }
-
-    & p {
-      margin-top: 20px;
-    }
-
-    & a {
-      text-decoration: none;
-      color: #000;
+    & > button:hover{
+      background-color: #b98a00;
     }
   }
+  &__price{
+    font-weight: bold;
+  }
+}
+
+/*ens->routes config*/
+/*start->footer config*/
+.footer {
+  background-color: #fff;
+  height: 200px;
+  margin-top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px -15px 25px rgba(0, 0, 0, 0.25);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__feedback {
+    font-size: 16px;
+    padding-top: 33px;
+  }
+
+  &__copyright {
+    text-align: right;
+    margin-top: auto;
+  }
+
+  & p {
+    margin-top: 20px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #000;
+  }
+}
 
 /*end->footer config*/

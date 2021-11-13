@@ -6,83 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,200&display=swap');
+    </style>
 </head>
 <body>
-
-<header>
-    <div class="container">
-        <div class="header__inner">
-            <a href="/"><img class="logo" src="images/logo.svg" alt="logo"></a>
-        </div>
-        <section class="crumbs">
-            <p class="crumbs__subtitle">Поиск по маршрутам</p>
-            <p class="crumbs__title">Маршруты</p>
-            <div class="crumbs__inner">
-                <a href="/">Главная</a>
-                <img src="images/arrow.svg" alt="">
-                <a href="#">Маршруты</a>
-            </div>
-        </section>
-    </div>
-</header>
-<div class="routes">
-    <div class="container">
-        <div class="routes__inner">
-            <div class="routes__title">Москва - Санкт Петербург</div>
-            <div class="orange-line"></div>
-            <div class="routes__text">2 Взрослых, Эконом</div>
-            <label for="depart">Вылет</label>
-            <input type="text" id="depart">
-            <label for="return">Прилет</label>
-            <input type="text" id="return">
-            <label for="sort">Сортировка</label>
-            <select name="" id="sort">
-                <option value="">от дешевых к дорогим</option>
-                <option value="">по рейтингу</option>
-                <option value="" selected>по популярности</option>
-            </select>
-            <div class="routes__items">
-                <div class="routes__item">
-                    <div class="routes__air-company-name">British airways</div>
-                    <div class="routes__air-company-depart">7:55</div>
-                    <div class="routes__air-company-time">
-                        <p>6 часов 50 минут</p>
-                        <img src="images/arrow-2.svg" alt="">
-                    </div>
-                    <div class="routes__air-company-return">14:45</div>
-                    <div class="gray-line"></div>
-                    <div class="routes__air-company-name">British airways</div>
-                    <div class="routes__air-company-depart">9:50</div>
-                    <div class="routes__air-company-time">
-                        <p>18 часов 40 минут</p>
-                        <img src="images/arrow-2.svg" alt="">
-                    </div>
-                    <div class="routes__air-company-return">11:30(+1)</div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div class="load">
+    <img src="images/loading.svg" alt="#">
 </div>
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer__inner">
-            <div class="footer__feedback">
-                <h3>Связь с нами</h3>
-                <div class="green-line"></div>
-                <p class="footer__address">Адрес: Протопоповский пер., 9, Москва, 129090</p>
-                <p class="footer__phone"><a href="tel:88005553535">Тел: 8 (800) 555-35-35</a></p>
-                <p class="footer__mail"><a href="mailto:epsilon@gmail.com">Почта: epsilon@gmail.com</a></p>
+<div id="load">
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <a href="/"><img class="logo" src="images/logo.svg" alt="logo"></a>
             </div>
-            <div class="footer__copyright">
-                Разработано веб-студией "MnoyRazrabotano"
+            <section class="crumbs">
+                <p class="crumbs__subtitle">Поиск по маршрутам</p>
+                <p class="crumbs__title">Маршруты</p>
+                <div class="crumbs__inner">
+                    <a href="/">Главная</a>
+                    <img src="images/arrow.svg" alt="">
+                    <a href="#">Маршруты</a>
+                </div>
+            </section>
+        </div>
+    </header>
+    <div class="routes">
+        <div class="container">
+            <div class="routes__inner">
+                <div class="routes__title">Москва - Санкт Петербург</div>
+                <div class="orange-line"></div>
+                <div class="routes__text">2 Взрослых, Эконом</div>
+                <form class="routes__form" action="">
+                    <div class="block">
+                        <label for="depart">Вылет</label>
+                        <input type="datetime-local" id="depart">
+                    </div>
+                    <div class="block">
+                        <label for="return">Прилет</label>
+                        <input type="datetime-local" id="return">
+                    </div>
+                    <div class="block">
+                        <label for="sort">Сортировка</label>
+                        <select name="" id="sort">
+                            <option value="">от дешевых к дорогим</option>
+                            <option value="">по рейтингу</option>
+                            <option value="" selected>по популярности</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="routes__items">
+                    <div class="routes__item">
+                        <div class="routes__item-up">
+                            <div class="routes__air-company-name">British airways</div>
+                            <div class="routes__air-company-depart">7:55</div>
+                            <div class="routes__air-company-time">
+                                <p>6 часов 50 минут</p>
+                                <img src="images/arrow-2.svg" alt="">
+                            </div>
+                            <div class="routes__air-company-return">14:45</div>
+                        </div>
+                        <div class="gray-line"></div>
+                        <div class="routes__item-down">
+                            <div class="routes__air-company-name">British airways</div>
+                            <div class="routes__air-company-depart">9:50</div>
+                            <div class="routes__air-company-time">
+                                <p>18 часов 40 минут</p>
+                                <img src="images/arrow-2.svg" alt="">
+                            </div>
+                            <div class="routes__air-company-return">11:30(+1)</div>
+                        </div>
+                        <div class="routes__price">1600$</div>
+                        <button class="routes__item-select">Выбрать</button>
+                    </div>
+                    <div class="routes__item">
+                        <div class="routes__item-up">
+                            <div class="routes__air-company-name">British airways</div>
+                            <div class="routes__air-company-depart">7:55</div>
+                            <div class="routes__air-company-time">
+                                <p>6 часов 50 минут</p>
+                                <img src="images/arrow-2.svg" alt="">
+                            </div>
+                            <div class="routes__air-company-return">14:45</div>
+                        </div>
+                        <div class="gray-line"></div>
+                        <div class="routes__item-down">
+                            <div class="routes__air-company-name">British airways</div>
+                            <div class="routes__air-company-depart">9:50</div>
+                            <div class="routes__air-company-time">
+                                <p>18 часов 40 минут</p>
+                                <img src="images/arrow-2.svg" alt="">
+                            </div>
+                            <div class="routes__air-company-return">11:30(+1)</div>
+                        </div>
+                        <div class="routes__price">1600$</div>
+                        <button class="routes__item-select">Выбрать</button>
+                    </div>
+                    <div class="routes__item">
+                        <div class="routes__item-up">
+                            <div class="routes__air-company-name">British airways</div>
+                            <div class="routes__air-company-depart">7:55</div>
+                            <div class="routes__air-company-time">
+                                <p>6 часов 50 минут</p>
+                                <img src="images/arrow-2.svg" alt="">
+                            </div>
+                            <div class="routes__air-company-return">14:45</div>
+                        </div>
+                        <div class="gray-line"></div>
+                        <div class="routes__item-down">
+                            <div class="routes__air-company-name">British airways</div>
+                            <div class="routes__air-company-depart">9:50</div>
+                            <div class="routes__air-company-time">
+                                <p>18 часов 40 минут</p>
+                                <img src="images/arrow-2.svg" alt="">
+                            </div>
+                            <div class="routes__air-company-return">11:30(+1)</div>
+                        </div>
+                        <div class="routes__price">1600$</div>
+                        <button class="routes__item-select">Выбрать</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</footer>
 
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__feedback">
+                    <h3>Связь с нами</h3>
+                    <div class="green-line"></div>
+                    <p class="footer__address">Адрес: Протопоповский пер., 9, Москва, 129090</p>
+                    <p class="footer__phone"><a href="tel:88005553535">Тел: 8 (800) 555-35-35</a></p>
+                    <p class="footer__mail"><a href="mailto:epsilon@gmail.com">Почта: epsilon@gmail.com</a></p>
+                </div>
+                <div class="footer__copyright">
+                    Разработано веб-студией "MnoyRazrabotano"
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
 <script src="js/main.min.js"></script>
 </body>
 </html>
