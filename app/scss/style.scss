@@ -94,6 +94,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  position: relative;
 
   & > a > .logo {
     width: 150px;
@@ -153,7 +154,7 @@ body {
 .main {
   color: white;
   margin-top: 100px;
-  height: 500px;
+  min-height: 500px;
 
   &__inner {
     display: flex;
@@ -215,7 +216,13 @@ body {
 }
 
 .block {
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.grid-block {
+  grid-column-start: 2;
 }
 
 .main__search-form input,
@@ -491,7 +498,7 @@ label {
     }
 
     & input, select {
-      width: 200px;/*180px*/
+      width: 200px; /*180px*/
       height: 40px;
       border: 1px solid transparent;
       border-radius: 5px;
@@ -507,9 +514,10 @@ label {
     padding: 50px;
     height: 250px;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
-    & > button{
+
+    & > button {
       width: 180px;
       height: 40px;
       color: #fff;
@@ -521,11 +529,13 @@ label {
       padding: 5px;
       font-size: 16px;
     }
-    & > button:hover{
+
+    & > button:hover {
       background-color: #b98a00;
     }
   }
-  &__price{
+
+  &__price {
     font-weight: bold;
   }
 }
@@ -567,3 +577,82 @@ label {
 }
 
 /*end->footer config*/
+
+/*mob-menu*/
+.mob__menu{
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  width: 200px;
+  top: 100px;
+}
+.mob-menu_btn{
+  display: none;
+}
+.close_btn{
+  display: none;
+}
+
+
+/*///////////////*/
+/*///////////////*/
+
+
+
+/*Media*/
+@media (max-width: 1300px) {
+  .block{
+    display: block;
+  }
+  .desc {
+    text-align: center;
+  }
+  .main{
+    &__inner{
+      display: grid;
+    }
+    &__btn{
+      margin: 25px auto;
+    }
+    &__form{
+      width: auto;
+      height: auto;
+      margin: 20px auto;
+      padding: 20px 60px;
+    }
+    &__search-form input, &__search-form select{
+      width: 350px;
+    }
+  }
+}
+@media (min-width: 850px){
+  .menu-list, .mob-menu_btn{
+    display: none !important;
+  }
+}
+@media (max-width: 850px){
+
+  .menu ul{
+    display: none;
+  }
+  .mob-menu_btn{
+    display: block;
+  }
+  .menu-list{
+    display: grid !important;
+    width: 200px;
+    & a{
+      width: auto !important;
+      height: auto !important;
+    }
+    & li{
+      line-height: inherit;
+      width: auto !important;
+      height: auto !important;
+    }
+    & li:last-child{
+      margin-left: 0;
+    }
+  }
+}

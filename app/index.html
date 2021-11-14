@@ -26,7 +26,21 @@
                         <li><a href="contacts.html">Контакты</a></li>
                         <li><a href=""><img src="images/user.svg" alt=""></a></li>
                     </ul>
+                    <div class="mobile_buttons">
+                        <span class="mob-menu_btn"><img src="images/menu-button.svg" alt="Меню"></span>
+                        <span class="close_btn"><img src="images/menu-button.svg" alt="Меню"></span>
+                    </div>
                 </nav>
+                <div class="mob__menu">
+                    <nav class="mob-menu__list">
+                        <ul class="menu-list">
+                            <li><a href="">Главная</a></li>
+                            <li><a href="about.html">О нас</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                          <li><a href=""><!--  <img src="images/user.svg" alt="">-->Log in</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -55,26 +69,36 @@
                 <div class="main__form">
                     <form class="main__search-form" action="routes.html" method="get">
                         <div class="block">
-                            <label for="from">Откуда</label>
-                            <input type="text" id="from">
-                            <label for="return">Прилет</label>
-                            <input type="date" id="return">
-                            <label for="class">Выберите класс</label>
-                            <select id="class">
-                                <option value="">Эконом</option>
-                                <option value="">Бизнес</option>
-                                <option value="">Люкс</option>
-                            </select>
-                        </div>
-                        <div class="block">
-                            <label for="to">Куда</label>
-                            <input type="text" id="to">
-                            <label for="depart">Вылет</label>
-                            <input type="date" id="depart">
-
-                            <label for="passenger">Кол-во пассажиров</label>
-                            <input type="number" id="passenger" min="1" max="10">
-                            <input class="btn-submit" type="submit" value="Поиск">
+                            <div>
+                                <label for="from">Откуда</label>
+                                <input type="text" id="from">
+                            </div>
+                            <div>
+                                <label for="return">Прилет</label>
+                                <input type="date" id="return">
+                            </div>
+                            <div>
+                                <label for="class">Выберите класс</label>
+                                <select id="class">
+                                    <option value="">Эконом</option>
+                                    <option value="">Бизнес</option>
+                                    <option value="">Люкс</option>
+                                </select></div>
+                            <div>
+                                <label for="to">Куда</label>
+                                <input type="text" id="to">
+                            </div>
+                            <div>
+                                <label for="depart">Вылет</label>
+                                <input type="date" id="depart">
+                            </div>
+                            <div>
+                                <label for="passenger">Кол-во пассажиров</label>
+                                <input type="number" id="passenger" min="1" max="10">
+                            </div>
+                            <div class="grid-block">
+                                <input class="btn-submit" type="submit" value="Поиск">
+                            </div>
                         </div>
                     </form>
                 </div>
